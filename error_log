@@ -1,0 +1,24 @@
+[29-Jan-2021 05:38:30 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/actwebspace/3.actwebspace.xyz/subscribe.php:13) in /home/actwebspace/3.actwebspace.xyz/subscribe.php on line 14
+[29-Jan-2021 05:45:06 UTC] PHP Parse error:  syntax error, unexpected '' (T_ENCAPSED_AND_WHITESPACE), expecting '-' or identifier (T_STRING) or variable (T_VARIABLE) or number (T_NUM_STRING) in /home/actwebspace/3.actwebspace.xyz/subscribe.php on line 17
+[29-Jan-2021 05:45:19 UTC] PHP Parse error:  syntax error, unexpected '' (T_ENCAPSED_AND_WHITESPACE), expecting '-' or identifier (T_STRING) or variable (T_VARIABLE) or number (T_NUM_STRING) in /home/actwebspace/3.actwebspace.xyz/subscribe.php on line 17
+[29-Jan-2021 05:45:58 UTC] PHP Parse error:  syntax error, unexpected '' (T_ENCAPSED_AND_WHITESPACE), expecting '-' or identifier (T_STRING) or variable (T_VARIABLE) or number (T_NUM_STRING) in /home/actwebspace/3.actwebspace.xyz/subscribe.php on line 17
+[29-Jan-2021 05:47:39 UTC] PHP Parse error:  syntax error, unexpected '' (T_ENCAPSED_AND_WHITESPACE), expecting '-' or identifier (T_STRING) or variable (T_VARIABLE) or number (T_NUM_STRING) in /home/actwebspace/3.actwebspace.xyz/subscribe.php on line 17
+[29-Jan-2021 05:51:06 UTC] PHP Parse error:  syntax error, unexpected '' (T_ENCAPSED_AND_WHITESPACE), expecting '-' or identifier (T_STRING) or variable (T_VARIABLE) or number (T_NUM_STRING) in /home/actwebspace/3.actwebspace.xyz/subscribe.php on line 17
+[29-Jan-2021 05:53:39 UTC] PHP Parse error:  syntax error, unexpected 'MIME' (T_STRING) in /home/actwebspace/3.actwebspace.xyz/send-mail.php on line 20
+[29-Jan-2021 06:17:30 UTC] PHP Warning:  Use of undefined constant setting - assumed 'setting' (this will throw an Error in a future version of PHP) in /home/actwebspace/3.actwebspace.xyz/contact.php on line 15
+[29-Jan-2021 06:17:30 UTC] PHP Warning:  Use of undefined constant site_name - assumed 'site_name' (this will throw an Error in a future version of PHP) in /home/actwebspace/3.actwebspace.xyz/contact.php on line 15
+[29-Jan-2021 06:17:30 UTC] PHP Warning:  Illegal string offset 'site_name' in /home/actwebspace/3.actwebspace.xyz/contact.php on line 15
+[29-Jan-2021 06:17:50 UTC] PHP Warning:  Use of undefined constant setting - assumed 'setting' (this will throw an Error in a future version of PHP) in /home/actwebspace/3.actwebspace.xyz/contact.php on line 15
+[29-Jan-2021 06:17:50 UTC] PHP Warning:  Illegal string offset 'site_name' in /home/actwebspace/3.actwebspace.xyz/contact.php on line 15
+[29-Jan-2021 06:17:53 UTC] PHP Warning:  Use of undefined constant setting - assumed 'setting' (this will throw an Error in a future version of PHP) in /home/actwebspace/3.actwebspace.xyz/contact.php on line 15
+[29-Jan-2021 06:17:53 UTC] PHP Warning:  Illegal string offset 'site_name' in /home/actwebspace/3.actwebspace.xyz/contact.php on line 15
+[29-Jan-2021 06:18:16 UTC] PHP Parse error:  syntax error, unexpected '1' (T_LNUMBER), expecting ')' in /home/actwebspace/3.actwebspace.xyz/contact.php on line 5
+[29-Jan-2021 06:18:26 UTC] PHP Parse error:  syntax error, unexpected 'en' (T_STRING), expecting ')' in /home/actwebspace/3.actwebspace.xyz/contact.php on line 11
+[29-Jan-2021 06:18:29 UTC] PHP Parse error:  syntax error, unexpected 'en' (T_STRING), expecting ')' in /home/actwebspace/3.actwebspace.xyz/contact.php on line 11
+[29-Jan-2021 06:18:29 UTC] PHP Parse error:  syntax error, unexpected 'en' (T_STRING), expecting ')' in /home/actwebspace/3.actwebspace.xyz/contact.php on line 11
+[29-Jan-2021 06:18:29 UTC] PHP Parse error:  syntax error, unexpected 'en' (T_STRING), expecting ')' in /home/actwebspace/3.actwebspace.xyz/contact.php on line 11
+[29-Jan-2021 06:19:41 UTC] PHP Parse error:  syntax error, unexpected 'en' (T_STRING), expecting ')' in /home/actwebspace/3.actwebspace.xyz/contact.php on line 11
+[29-Jan-2021 06:19:43 UTC] PHP Parse error:  syntax error, unexpected 'en' (T_STRING), expecting ')' in /home/actwebspace/3.actwebspace.xyz/contact.php on line 11
+[29-Jan-2021 06:19:44 UTC] PHP Parse error:  syntax error, unexpected 'en' (T_STRING), expecting ')' in /home/actwebspace/3.actwebspace.xyz/contact.php on line 11
+[29-Jan-2021 06:19:44 UTC] PHP Parse error:  syntax error, unexpected 'en' (T_STRING), expecting ')' in /home/actwebspace/3.actwebspace.xyz/contact.php on line 11
+[29-Jan-2021 06:19:56 UTC] PHP Parse error:  syntax error, unexpected 'en' (T_STRING), expecting ')' in /home/actwebspace/3.actwebspace.xyz/contact.php on line 11
