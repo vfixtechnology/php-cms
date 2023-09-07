@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.1.1
+-- version 5.2.0
 -- https://www.phpmyadmin.net/
 --
--- Host: 127.0.0.1
--- Generation Time: Dec 16, 2021 at 08:51 AM
--- Server version: 10.4.21-MariaDB
--- PHP Version: 7.4.24
+-- Host: 127.0.0.1:3306
+-- Generation Time: Apr 29, 2023 at 01:12 PM
+-- Server version: 8.0.31
+-- PHP Version: 7.4.33
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -27,16 +27,18 @@ SET time_zone = "+00:00";
 -- Table structure for table `about`
 --
 
-CREATE TABLE `about` (
-  `id` int(100) NOT NULL,
+DROP TABLE IF EXISTS `about`;
+CREATE TABLE IF NOT EXISTS `about` (
+  `id` int NOT NULL AUTO_INCREMENT,
   `title` varchar(1000) DEFAULT NULL,
   `short` varchar(1500) DEFAULT NULL,
   `descrip` varchar(10000) DEFAULT NULL,
   `img` varchar(100) DEFAULT NULL,
   `url` varchar(255) DEFAULT NULL,
   `date` varchar(100) DEFAULT NULL,
-  `status` varchar(10) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+  `status` varchar(10) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `about`
@@ -51,12 +53,14 @@ INSERT INTO `about` (`id`, `title`, `short`, `descrip`, `img`, `url`, `date`, `s
 -- Table structure for table `admin`
 --
 
-CREATE TABLE `admin` (
-  `ad_id` int(100) NOT NULL,
+DROP TABLE IF EXISTS `admin`;
+CREATE TABLE IF NOT EXISTS `admin` (
+  `ad_id` int NOT NULL AUTO_INCREMENT,
   `ad_name` varchar(20) NOT NULL,
   `ad_email` varchar(100) NOT NULL,
-  `ad_password` varchar(100) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+  `ad_password` varchar(100) NOT NULL,
+  PRIMARY KEY (`ad_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `admin`
@@ -71,23 +75,26 @@ INSERT INTO `admin` (`ad_id`, `ad_name`, `ad_email`, `ad_password`) VALUES
 -- Table structure for table `blog`
 --
 
-CREATE TABLE `blog` (
-  `id` int(100) NOT NULL,
+DROP TABLE IF EXISTS `blog`;
+CREATE TABLE IF NOT EXISTS `blog` (
+  `id` int NOT NULL AUTO_INCREMENT,
   `title` varchar(1000) DEFAULT NULL,
   `category` varchar(255) DEFAULT NULL,
   `descrip` varchar(10000) DEFAULT NULL,
   `img` varchar(100) DEFAULT NULL,
   `url` varchar(255) DEFAULT NULL,
   `date` varchar(100) DEFAULT NULL,
-  `status` varchar(10) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+  `status` varchar(10) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `blog`
 --
 
 INSERT INTO `blog` (`id`, `title`, `category`, `descrip`, `img`, `url`, `date`, `status`) VALUES
-(4, 'Chinese Transporters overtaking Western  Market', 'Technology', '<h6><p style=\"margin-right: 0px; margin-bottom: 15px; margin-left: 0px; padding: 0px; text-align: justify; font-family: \" open=\"\" sans\",=\"\" arial,=\"\" sans-serif;=\"\" font-size:=\"\" 14px;\"=\"\">China will overtake the US as the worldâ€™s biggest economy before the end of the decade after outperforming its rival during the global Covid-19 pandemic, according to a report.</p><p style=\"margin-right: 0px; margin-bottom: 15px; margin-left: 0px; padding: 0px; text-align: justify; font-family: \" open=\"\" sans\",=\"\" arial,=\"\" sans-serif;=\"\" font-size:=\"\" 14px;\"=\"\">The Centre for Economics and Business Research said that it nowexpected the value of Chinaâ€™s economy when measured in dollars to exceed that of the US by 2028, half a decade sooner than it expected a year ago.</p><p style=\"margin-right: 0px; margin-bottom: 15px; margin-left: 0px; padding: 0px; text-align: justify; font-family: \" open=\"\" sans\",=\"\" arial,=\"\" sans-serif;=\"\" font-size:=\"\" 14px;\"=\"\"><span style=\"color: inherit; font-family: inherit; font-size: 1rem;\">In its annual league table of the growth prospects of 193 countries, the UK-based consultancy group said China had bounced back quickly from the effects of Covid-19 and would grow by 2% in 2020, as the one major global economy to expand.</span><br></p><p style=\"margin-right: 0px; margin-bottom: 15px; margin-left: 0px; padding: 0px; text-align: justify; font-family: \" open=\"\" sans\",=\"\" arial,=\"\" sans-serif;=\"\" font-size:=\"\" 14px;\"=\"\"><span style=\"color: inherit; font-family: inherit; font-size: 1rem;\">With the US expected to contract by 5% this year, China will narrow the gap with its biggest rival, the CEBR said. Overall, global gross domestic product is forecast to decline by 4.4% this year, in the biggest one-year fall since the second world war.</span><br></p></h6>', '1976955973news-27.jpg', '', 'Mon 08 Feb 2021', '0');
+(4, 'Chinese Transporters overtaking Western  Market', 'Technology', '<h6><p style=\"margin-right: 0px; margin-bottom: 15px; margin-left: 0px; padding: 0px; text-align: justify; font-family: \" open=\"\" sans\",=\"\" arial,=\"\" sans-serif;=\"\" font-size:=\"\" 14px;\"=\"\">China will overtake the US as the worldâ€™s biggest economy before the end of the decade after outperforming its rival during the global Covid-19 pandemic, according to a report.</p><p style=\"margin-right: 0px; margin-bottom: 15px; margin-left: 0px; padding: 0px; text-align: justify; font-family: \" open=\"\" sans\",=\"\" arial,=\"\" sans-serif;=\"\" font-size:=\"\" 14px;\"=\"\">The Centre for Economics and Business Research said that it nowexpected the value of Chinaâ€™s economy when measured in dollars to exceed that of the US by 2028, half a decade sooner than it expected a year ago.</p><p style=\"margin-right: 0px; margin-bottom: 15px; margin-left: 0px; padding: 0px; text-align: justify; font-family: \" open=\"\" sans\",=\"\" arial,=\"\" sans-serif;=\"\" font-size:=\"\" 14px;\"=\"\"><span style=\"color: inherit; font-family: inherit; font-size: 1rem;\">In its annual league table of the growth prospects of 193 countries, the UK-based consultancy group said China had bounced back quickly from the effects of Covid-19 and would grow by 2% in 2020, as the one major global economy to expand.</span><br></p><p style=\"margin-right: 0px; margin-bottom: 15px; margin-left: 0px; padding: 0px; text-align: justify; font-family: \" open=\"\" sans\",=\"\" arial,=\"\" sans-serif;=\"\" font-size:=\"\" 14px;\"=\"\"><span style=\"color: inherit; font-family: inherit; font-size: 1rem;\">With the US expected to contract by 5% this year, China will narrow the gap with its biggest rival, the CEBR said. Overall, global gross domestic product is forecast to decline by 4.4% this year, in the biggest one-year fall since the second world war.</span><br></p></h6>', '9186165081976955973news-27.jpg', '', 'Sat 29 Apr 2023', '0'),
+(9, 'Quaerat non hic eu e', 'Aditya', '<p>awsdasdasdsadsad</p>', '1723817136Image20230427174446.png', '', 'Sat 29 Apr 2023', '0');
 
 -- --------------------------------------------------------
 
@@ -95,10 +102,12 @@ INSERT INTO `blog` (`id`, `title`, `category`, `descrip`, `img`, `url`, `date`, 
 -- Table structure for table `category`
 --
 
-CREATE TABLE `category` (
-  `id` int(100) NOT NULL,
-  `cat_name` varchar(255) NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+DROP TABLE IF EXISTS `category`;
+CREATE TABLE IF NOT EXISTS `category` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `cat_name` varchar(255) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=12 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `category`
@@ -106,7 +115,8 @@ CREATE TABLE `category` (
 
 INSERT INTO `category` (`id`, `cat_name`) VALUES
 (5, 'Transportations'),
-(6, 'Technology');
+(6, 'Technology'),
+(11, 'Aditya');
 
 -- --------------------------------------------------------
 
@@ -114,14 +124,16 @@ INSERT INTO `category` (`id`, `cat_name`) VALUES
 -- Table structure for table `causes`
 --
 
-CREATE TABLE `causes` (
-  `id` int(100) NOT NULL,
+DROP TABLE IF EXISTS `causes`;
+CREATE TABLE IF NOT EXISTS `causes` (
+  `id` int NOT NULL AUTO_INCREMENT,
   `title` varchar(1000) DEFAULT NULL,
   `descrip` varchar(15000) DEFAULT NULL,
   `img` varchar(100) DEFAULT NULL,
   `url` varchar(255) DEFAULT NULL,
-  `status` varchar(10) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+  `status` varchar(10) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `causes`
@@ -138,12 +150,14 @@ INSERT INTO `causes` (`id`, `title`, `descrip`, `img`, `url`, `status`) VALUES
 -- Table structure for table `faqs`
 --
 
-CREATE TABLE `faqs` (
-  `id` int(100) NOT NULL,
-  `title` varchar(1000) COLLATE utf8_unicode_ci DEFAULT NULL,
-  `descc` varchar(5000) COLLATE utf8_unicode_ci DEFAULT NULL,
-  `status` varchar(50) COLLATE utf8_unicode_ci NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+DROP TABLE IF EXISTS `faqs`;
+CREATE TABLE IF NOT EXISTS `faqs` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `title` varchar(1000) CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci DEFAULT NULL,
+  `descc` varchar(5000) CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci DEFAULT NULL,
+  `status` varchar(50) CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_unicode_ci;
 
 --
 -- Dumping data for table `faqs`
@@ -161,12 +175,14 @@ INSERT INTO `faqs` (`id`, `title`, `descc`, `status`) VALUES
 -- Table structure for table `images`
 --
 
-CREATE TABLE `images` (
-  `id` int(11) NOT NULL,
-  `file_name` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+DROP TABLE IF EXISTS `images`;
+CREATE TABLE IF NOT EXISTS `images` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `file_name` varchar(255) CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NOT NULL,
   `uploaded_on` datetime NOT NULL,
-  `status` enum('1','0') COLLATE utf8_unicode_ci NOT NULL DEFAULT '1'
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+  `status` enum('1','0') CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NOT NULL DEFAULT '1',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_unicode_ci;
 
 -- --------------------------------------------------------
 
@@ -174,13 +190,15 @@ CREATE TABLE `images` (
 -- Table structure for table `location`
 --
 
-CREATE TABLE `location` (
-  `id` int(50) NOT NULL,
+DROP TABLE IF EXISTS `location`;
+CREATE TABLE IF NOT EXISTS `location` (
+  `id` int NOT NULL AUTO_INCREMENT,
   `name` varchar(20) NOT NULL,
   `type` varchar(20) NOT NULL,
   `img` varchar(100) NOT NULL,
-  `status` varchar(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+  `status` varchar(11) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=36 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `location`
@@ -195,12 +213,14 @@ INSERT INTO `location` (`id`, `name`, `type`, `img`, `status`) VALUES
 -- Table structure for table `media`
 --
 
-CREATE TABLE `media` (
-  `id` int(11) NOT NULL,
-  `file_name` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+DROP TABLE IF EXISTS `media`;
+CREATE TABLE IF NOT EXISTS `media` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `file_name` varchar(255) CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NOT NULL,
   `uploaded_on` datetime NOT NULL,
-  `status` enum('1','0') COLLATE utf8_unicode_ci NOT NULL DEFAULT '1'
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+  `status` enum('1','0') CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NOT NULL DEFAULT '1',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=30 DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_unicode_ci;
 
 --
 -- Dumping data for table `media`
@@ -225,8 +245,9 @@ INSERT INTO `media` (`id`, `file_name`, `uploaded_on`, `status`) VALUES
 -- Table structure for table `package`
 --
 
-CREATE TABLE `package` (
-  `id` int(100) NOT NULL,
+DROP TABLE IF EXISTS `package`;
+CREATE TABLE IF NOT EXISTS `package` (
+  `id` int NOT NULL AUTO_INCREMENT,
   `name` varchar(50) NOT NULL,
   `type` varchar(20) NOT NULL,
   `location` varchar(30) NOT NULL,
@@ -236,8 +257,9 @@ CREATE TABLE `package` (
   `Itinerary` varchar(8000) NOT NULL,
   `Inclusions` varchar(8000) NOT NULL,
   `NOTE` varchar(8000) NOT NULL,
-  `status` varchar(10) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+  `status` varchar(10) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=31 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `package`
@@ -262,16 +284,18 @@ INSERT INTO `package` (`id`, `name`, `type`, `location`, `price`, `day`, `img`, 
 -- Table structure for table `services`
 --
 
-CREATE TABLE `services` (
-  `id` int(100) NOT NULL,
+DROP TABLE IF EXISTS `services`;
+CREATE TABLE IF NOT EXISTS `services` (
+  `id` int NOT NULL AUTO_INCREMENT,
   `title` varchar(1000) DEFAULT NULL,
   `short` varchar(1500) DEFAULT NULL,
   `descrip` varchar(10000) DEFAULT NULL,
   `img` varchar(100) DEFAULT NULL,
   `url` varchar(255) DEFAULT NULL,
   `date` varchar(100) DEFAULT NULL,
-  `status` varchar(10) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+  `status` varchar(10) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=43 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `services`
@@ -288,34 +312,36 @@ INSERT INTO `services` (`id`, `title`, `short`, `descrip`, `img`, `url`, `date`,
 -- Table structure for table `settings`
 --
 
-CREATE TABLE `settings` (
-  `id` int(100) NOT NULL,
-  `header_logo` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
-  `email` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
-  `phone` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
-  `phone2` varchar(20) COLLATE utf8_unicode_ci DEFAULT NULL,
-  `footer_logo` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
-  `footer_desc` varchar(5000) COLLATE utf8_unicode_ci DEFAULT NULL,
-  `facebook` varchar(2000) COLLATE utf8_unicode_ci DEFAULT NULL,
-  `twitter` varchar(2000) COLLATE utf8_unicode_ci DEFAULT NULL,
-  `linkedin` varchar(2000) COLLATE utf8_unicode_ci DEFAULT NULL,
-  `instagram` varchar(2000) COLLATE utf8_unicode_ci DEFAULT NULL,
-  `youtube` varchar(2000) COLLATE utf8_unicode_ci DEFAULT NULL,
-  `address` varchar(1000) COLLATE utf8_unicode_ci DEFAULT NULL,
-  `city` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
-  `state` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
-  `country` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
-  `pin` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
-  `map` varchar(3000) COLLATE utf8_unicode_ci DEFAULT NULL,
-  `site_name` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+DROP TABLE IF EXISTS `settings`;
+CREATE TABLE IF NOT EXISTS `settings` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `header_logo` varchar(255) CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci DEFAULT NULL,
+  `email` varchar(255) CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci DEFAULT NULL,
+  `phone` varchar(255) CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci DEFAULT NULL,
+  `phone2` varchar(20) CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci DEFAULT NULL,
+  `footer_logo` varchar(255) CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci DEFAULT NULL,
+  `footer_desc` varchar(5000) CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci DEFAULT NULL,
+  `facebook` varchar(2000) CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci DEFAULT NULL,
+  `twitter` varchar(2000) CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci DEFAULT NULL,
+  `linkedin` varchar(2000) CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci DEFAULT NULL,
+  `instagram` varchar(2000) CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci DEFAULT NULL,
+  `youtube` varchar(2000) CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci DEFAULT NULL,
+  `address` varchar(1000) CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci DEFAULT NULL,
+  `city` varchar(255) CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci DEFAULT NULL,
+  `state` varchar(255) CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci DEFAULT NULL,
+  `country` varchar(255) CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci DEFAULT NULL,
+  `pin` varchar(255) CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci DEFAULT NULL,
+  `map` varchar(3000) CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci DEFAULT NULL,
+  `site_name` varchar(255) CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_unicode_ci;
 
 --
 -- Dumping data for table `settings`
 --
 
 INSERT INTO `settings` (`id`, `header_logo`, `email`, `phone`, `phone2`, `footer_logo`, `footer_desc`, `facebook`, `twitter`, `linkedin`, `instagram`, `youtube`, `address`, `city`, `state`, `country`, `pin`, `map`, `site_name`) VALUES
-(1, '1077930642754453333Logo 1-min.png', 'youremail@gmail.com', '+1 9898 124 125', '+91 9899 007 899', '1328530813Logo 1.PNG', '', '#', '#', '#', '#', '#', '55 , ste A, Dover, DE 19901 USA', '', '', '', '', '                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                <iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3093.7963837922716!2d-75.52637848464192!3d39.15661257953152!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c764aa67a3b055%3A0x3ae0e625add8fccf!2s8%20The%20Green%20STE%20A%2C%20Dover%2C%20DE%2019901%2C%20USA!5e0!3m2!1sen!2sin!4v1611844096495!5m2!1sen!2sin\" width=\"600\" height=\"490\" style=\"border:0; width: 100%\" allowfullscreen=\"\" aria-hidden=\"false\" tabindex=\"0\"></iframe>                                                                                                                                                                                                                                                                                                                                                                                                                                ', 'Poornima');
+(1, '1077930642754453333Logo 1-min.png', 'youremail@gmail.com', '+1 9898 124 125', '+91 9899 007 899', '1328530813Logo 1.PNG', '', '#', 'new', '#', '#', '#', '55 , ste A, Dover, DE 19901 USA', '', '', '', '', '                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    <iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3093.7963837922716!2d-75.52637848464192!3d39.15661257953152!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c764aa67a3b055%3A0x3ae0e625add8fccf!2s8%20The%20Green%20STE%20A%2C%20Dover%2C%20DE%2019901%2C%20USA!5e0!3m2!1sen!2sin!4v1611844096495!5m2!1sen!2sin\" width=\"600\" height=\"490\" style=\"border:0; width: 100%\" allowfullscreen=\"\" aria-hidden=\"false\" tabindex=\"0\"></iframe>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                ', 'Poornima');
 
 -- --------------------------------------------------------
 
@@ -323,16 +349,18 @@ INSERT INTO `settings` (`id`, `header_logo`, `email`, `phone`, `phone2`, `footer
 -- Table structure for table `teams`
 --
 
-CREATE TABLE `teams` (
-  `id` int(100) NOT NULL,
+DROP TABLE IF EXISTS `teams`;
+CREATE TABLE IF NOT EXISTS `teams` (
+  `id` int NOT NULL AUTO_INCREMENT,
   `title` varchar(1000) DEFAULT NULL,
   `designation` varchar(255) DEFAULT NULL,
   `descrip` varchar(10000) DEFAULT NULL,
   `img` varchar(100) DEFAULT NULL,
   `url` varchar(255) DEFAULT NULL,
   `date` varchar(100) DEFAULT NULL,
-  `status` varchar(10) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+  `status` varchar(10) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `teams`
@@ -350,16 +378,18 @@ INSERT INTO `teams` (`id`, `title`, `designation`, `descrip`, `img`, `url`, `dat
 -- Table structure for table `testimonials`
 --
 
-CREATE TABLE `testimonials` (
-  `id` int(100) NOT NULL,
+DROP TABLE IF EXISTS `testimonials`;
+CREATE TABLE IF NOT EXISTS `testimonials` (
+  `id` int NOT NULL AUTO_INCREMENT,
   `title` varchar(1000) DEFAULT NULL,
   `designation` varchar(255) DEFAULT NULL,
   `descrip` varchar(10000) DEFAULT NULL,
   `img` varchar(100) DEFAULT NULL,
   `url` varchar(255) DEFAULT NULL,
   `date` varchar(100) DEFAULT NULL,
-  `status` varchar(10) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+  `status` varchar(10) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=33 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `testimonials`
@@ -368,183 +398,7 @@ CREATE TABLE `testimonials` (
 INSERT INTO `testimonials` (`id`, `title`, `designation`, `descrip`, `img`, `url`, `date`, `status`) VALUES
 (28, 'Nathan Felix', 'Account Speaclist', 'I am highly impressed with the professionalism and passion of people in this warehouse very neat & clean.', '785969917author-1.jpg', NULL, 'Thu 28 Jan 2021', '0'),
 (29, 'Lillian Grace', 'VP, Green Valley Intenational', 'The staff is amazing! Very helpful and considerate with a sense of urgency &Loads are 99% on time.', '1606237998author-2.jpg', NULL, 'Thu 28 Jan 2021', '0'),
-(30, 'Roman Dexter', 'Business Man, Newyork, USA', 'I only use GLOBAL DIGITAL SYSTEM CORPORATION  for my shipping needs. My clients have all come to expect the excellent shipping.', '1528721535author-3.jpg', NULL, 'Thu 28 Jan 2021', '0');
-
---
--- Indexes for dumped tables
---
-
---
--- Indexes for table `about`
---
-ALTER TABLE `about`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `admin`
---
-ALTER TABLE `admin`
-  ADD PRIMARY KEY (`ad_id`);
-
---
--- Indexes for table `blog`
---
-ALTER TABLE `blog`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `category`
---
-ALTER TABLE `category`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `causes`
---
-ALTER TABLE `causes`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `faqs`
---
-ALTER TABLE `faqs`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `images`
---
-ALTER TABLE `images`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `location`
---
-ALTER TABLE `location`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `media`
---
-ALTER TABLE `media`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `package`
---
-ALTER TABLE `package`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `services`
---
-ALTER TABLE `services`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `settings`
---
-ALTER TABLE `settings`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `teams`
---
-ALTER TABLE `teams`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `testimonials`
---
-ALTER TABLE `testimonials`
-  ADD PRIMARY KEY (`id`);
-
---
--- AUTO_INCREMENT for dumped tables
---
-
---
--- AUTO_INCREMENT for table `about`
---
-ALTER TABLE `about`
-  MODIFY `id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
-
---
--- AUTO_INCREMENT for table `admin`
---
-ALTER TABLE `admin`
-  MODIFY `ad_id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
-
---
--- AUTO_INCREMENT for table `blog`
---
-ALTER TABLE `blog`
-  MODIFY `id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
-
---
--- AUTO_INCREMENT for table `category`
---
-ALTER TABLE `category`
-  MODIFY `id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
-
---
--- AUTO_INCREMENT for table `causes`
---
-ALTER TABLE `causes`
-  MODIFY `id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
-
---
--- AUTO_INCREMENT for table `faqs`
---
-ALTER TABLE `faqs`
-  MODIFY `id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
-
---
--- AUTO_INCREMENT for table `images`
---
-ALTER TABLE `images`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
-
---
--- AUTO_INCREMENT for table `location`
---
-ALTER TABLE `location`
-  MODIFY `id` int(50) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=36;
-
---
--- AUTO_INCREMENT for table `media`
---
-ALTER TABLE `media`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=30;
-
---
--- AUTO_INCREMENT for table `package`
---
-ALTER TABLE `package`
-  MODIFY `id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31;
-
---
--- AUTO_INCREMENT for table `services`
---
-ALTER TABLE `services`
-  MODIFY `id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=41;
-
---
--- AUTO_INCREMENT for table `settings`
---
-ALTER TABLE `settings`
-  MODIFY `id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
-
---
--- AUTO_INCREMENT for table `teams`
---
-ALTER TABLE `teams`
-  MODIFY `id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
-
---
--- AUTO_INCREMENT for table `testimonials`
---
-ALTER TABLE `testimonials`
-  MODIFY `id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31;
+(30, 'Roman Dexter', 'Business Man, Newyork, USA', 'I only use GLOBAL DIGITAL SYSTEM CORPORATION  for my shipping needs. My clients have all come to expect the excellent shipping.', '6980503411528721535author-3.jpg', NULL, 'Sat 29 Apr 2023', '0');
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
